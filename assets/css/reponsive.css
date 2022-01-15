@@ -1,0 +1,133 @@
+/* Tablet & mobile */
+@media (max-width: 1023px){
+    .hide-one-mobile-tablet {
+        display: none;
+    }
+    :root {
+        --height-header: 8rem;
+        --height-header-search: 8rem;
+    }
+    .header__sort-bar {
+        display: flex;
+    }
+}
+
+/* Tablet  */
+@media (min-width: 740px) and (max-width: 1023px){
+    
+    .hide-one-tablet {
+        display: none;
+    }
+    .header__shopping {
+        width: 8.4rem;
+        text-align: right;
+    }
+    .footer-download__chplay,
+    .footer-download-app__store {
+        width: 80px;
+    }
+    .home-product-items {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+    .header__shopping-cart-list {
+        max-height: 40vh;
+    }
+    
+    .home-product {
+        margin-top: 30px;
+    }
+    .home-page a {
+        margin: 0 20px;
+    }
+
+}
+/* mobile */
+@media (max-width: 739px){
+    .hide-one-mobile {
+        display: none;
+    }
+    .header__search {
+        justify-content: space-around;
+    }
+    .header__logo,
+    .header__shopping {
+        width: unset;
+    }
+    .header__input {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: var(--height-header);
+        z-index: 1;
+        padding: 0 8px;
+        animation: mobilesearch linear 0.3s;
+        display: none;
+    }
+    .header__menu-mobile,
+    .header__search-mobile {
+        display: block;
+    }
+    .header__input-search-history {
+        position: fixed;
+        top: calc(var(--height-header) + 47px);
+        left: 0px;
+        width: 100%;
+    }
+    .header__input-label {
+        padding: 0 4px;
+    }
+    .home-page a {
+        margin: 0 6px;
+    }
+    .app__container {
+        margin: 0 4px;
+    }
+    .mobile-catagory {
+        display: flex;  
+    }
+    .container-footer {
+        margin: 0 8px;
+    }
+    .footer-items,
+    .footer-heading {
+        text-align: center;
+    }
+    .footer-download {
+        justify-content: center;
+    }
+    .header__shopping-cart {
+        position: fixed;
+        top: var(--height-header);
+        right: 0;
+        width: 100%;
+    }
+    .header__shopping-cart-list {
+        max-height: 30vh;
+    }
+    .header__shopping-cart::before {
+        display: none;
+    }
+    
+
+    @keyframes mobilesearch {
+        from{
+            opacity: 0;
+            top: calc(var(--height-header)/2);
+        }
+        to{
+            opacity: 1;
+            top: var(--height-header);
+        }
+    }
+    @keyframes mobilemenu {
+        from{
+            opacity: 0;
+            transform: translateX(-25rem);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
